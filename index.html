@@ -3,18 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Geometry: Angles and Triangles</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
 </head>
 <body>
-    <div class="todo-container">
-        <h1>To-Do List</h1>
-        <div class="input-group">
-            <input type="text" id="taskInput" placeholder="Add a new task..." />
-            <button id="addTaskButton">Add Task</button>
-        </div>
-        <ul id="taskList"></ul>
-    </div>
-    <script src="script.js"></script>
+
+    <!-- Video Lecture Section -->
+    <section id="lecture">
+        <h1>Video Lecture: Geometry - Angles and Triangles</h1>
+        <iframe width="400" height="315" src="https://www.youtube.com/embed/j2b2uyC9k1o?si=WWH2toAu3NZEVPSs" 
+                title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz">
+        <h2>Quiz: Geometry - Angles and Triangles</h2>
+        <form id="quizForm">
+            <div class="quiz-question">
+                <p>1. What is the sum of the interior angles of a triangle?</p>
+                <input type="radio" name="q1" value="A"> A. 90°<br>
+                <input type="radio" name="q1" value="B"> B. 180°<br>
+                <input type="radio" name="q1" value="C"> C. 360°<br>
+                <span class="feedback" id="feedback1"></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>2. Which type of triangle has two equal sides and two equal angles?</p>
+                <input type="radio" name="q2" value="A"> A. Equilateral<br>
+                <input type="radio" name="q2" value="B"> B. Isosceles<br>
+                <input type="radio" name="q2" value="C"> C. Scalene<br>
+                <span class="feedback" id="feedback2"></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>3. In a right-angled triangle, what is the measure of one of the angles, other than the right angle?</p>
+                <input type="radio" name="q3" value="A"> A. 45°<br>
+                <input type="radio" name="q3" value="B"> B. 60°<br>
+                <input type="radio" name="q3" value="C"> C. It can be any value less than 90°<br>
+                <span class="feedback" id="feedback3"></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>4. What type of angle is greater than 90° but less than 180°?</p>
+                <input type="radio" name="q4" value="A"> A. Acute<br>
+                <input type="radio" name="q4" value="B"> B. Obtuse<br>
+                <input type="radio" name="q4" value="C"> C. Right<br>
+                <span class="feedback" id="feedback4"></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>5. How many right angles are there in a square?</p>
+                <input type="radio" name="q5" value="A"> A. 2<br>
+                <input type="radio" name="q5" value="B"> B. 3<br>
+                <input type="radio" name="q5" value="C"> C. 4<br>
+                <span class="feedback" id="feedback5"></span>
+            </div>
+
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </section>
+
+    <!-- Assignment Section -->
+    <section id="assignment">
+        <h2>Assignment</h2>
+        <p><strong>Assignment Question:</strong></p>
+        <p>Write a tutorial that explains different types of angles and triangles. Include diagrams and example problems that involve calculating unknown angles in various triangle types.</p>
+        <p>Please submit your assignment by sending an email to: <a href="mailto:geometryassignment2021@gmail.com">geometryassignment2021@gmail.com</a></p>
+        <textarea id="assignmentInput" rows="6" placeholder="Write your assignment here..."></textarea>
+        <button id="submitAssignment" onclick="submitAssignment()">Submit Assignment</button>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donation">
+        <h2>PLEASE DONATE</h2>
+        <p>Account Number: 2032202001590</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/GTBank_logo.svg/768px-GTBank_logo.svg.png" alt="GTBank Logo" width="150">
+        <p>Wave Mobile: 3709558</p>
+        <img src="https://s.rfi.fr/media/display/ed44f02a-c239-11ec-b0fc-005056bf8594/w:1280/p:16x9/wave-senegal-mobile-money.png" alt="Wave Mobile Logo" width="150">
+    </section>
+
+    <script src="script.js"></script> <!-- Link to external JS file -->
 </body>
 </html>
