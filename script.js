@@ -1,45 +1,53 @@
-// Select elements
-const taskInput = document.getElementById("taskInput");
-const addTaskButton = document.getElementById("addTaskButton");
-const taskList = document.getElementById("taskList");
+document.getElementById('quizForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
 
-// Function to add a new task
-function addTask() {
-    const taskText = taskInput.value.trim();
+    let score = 0;
+    const totalQuestions = 5;
 
-    if (taskText === "") {
-        alert("Please enter a task!");
-        return;
-    }
-
-    const li = document.createElement("li");
-
-    li.innerHTML = `
-        <span>${taskText}</span>
-        <button class="delete">Delete</button>
-    `;
-
-    // Add functionality to mark as completed
-    li.addEventListener("click", () => {
-        li.classList.toggle("completed");
+    // Clear all previous feedback
+    document.querySelectorAll('.feedback').forEach(feedback => {
+        feedback.textContent = '';
     });
 
-    // Add functionality to delete task
-    li.querySelector(".delete").addEventListener("click", (e) => {
-        e.stopPropagation(); // Prevent marking as completed
-        li.remove();
-    });
+    // Correct answers for each question
+    const correctAnswers = {
+        q1: 'B',
+        q2: 'B',
+        q3: 'C',
+        q4: 'B',
+        q5: 'C'
+    };
 
-    taskList.appendChild(li);
-    taskInput.value = ""; // Clear input field
-}
+    // Check each question
+    for (let i = 1; i <= totalQuestions; i++) {
+        const questionName = 'q' + i;
+        const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+        const feedbackElement = document.getElementById(`feedback${i}`);
 
-// Add event listener to add task button
-addTaskButton.addEventListener("click", addTask);
-
-// Add task on pressing Enter key
-taskInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-        addTask();
+        if (selectedOption) {
+            if (selectedOption.value === correctAnswers[questionName]) {
+                feedbackElement.textContent = '✔ Correct!';
+                feedbackElement.style.color = 'green';
+                score++;
+            } else {
+                feedbackElement.textContent = '✖ Incorrect!';
+                feedbackElement.style.color = 'red';
+            }
+        } else {
+            feedbackElement.textContent = '✖ No answer selected!';
+            feedbackElement.style.color = 'red';
+        }
     }
+
+    alert(`Your score is ${score} out of ${totalQuestions}`);
 });
+
+function submitAssignment() {
+    const assignmentText = document.getElementById('assignmentInput').value;
+    if (assignmentText.trim() === "") {
+        alert("Please write something before submitting!");
+    } else {
+        alert("Your assignment has been submitted. Please send it to the email provided.");
+        document.getElementById('assignmentInput').value = ''; // Clear the textarea
+    }
+}
