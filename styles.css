@@ -69,6 +69,58 @@ button:hover {
     border-radius: 4px;
     font-size: 16px;
 }
+/* Progress Link Section */
+#progress-link {
+    text-align: center;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.quiz-features li {
+    margin: 12px 0;
+    font-size: 1.1em;
+    color: #333;
+    padding-left: 10px;
+}
+
+.progress-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4CAF50;  /* Matching the website's green theme */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.progress-button:hover {
+    background-color: #45a049;  /* Matching the hover state from the website */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.quiz-note {
+    color: #333;
+    font-size: 0.9em;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
 
 /* Donation Section Styles */
 #donation {
